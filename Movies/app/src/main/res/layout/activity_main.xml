@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id= "@+id/swipeRefresher"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/back"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:elevation="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aguafina_script"
+                    android:text="Cine-Ark"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:textColor="#FFF"
+                    android:textSize="60sp" />
+
+            </LinearLayout>
+            <TextView
+                style="@style/MainActHeaderStyle"
+                android:text="Top Picks" />
+            <View
+                android:background="@android:color/darker_gray"
+                android:layout_width="280dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_topPicks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <View
+                android:background="@android:color/darker_gray"
+                android:layout_width="280dp"
+                android:layout_gravity="center"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"/>
+
+
+            <TextView
+                style="@style/MainActHeaderStyle"
+                android:text="Genres" />
+
+            <View
+                android:background="@android:color/darker_gray"
+                android:layout_width="280dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/action_button"
+                style="@style/CategoryCardStyle">
+
+                <TextView
+                    style="@style/CategoryTextStyle"
+                    android:text="Action" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/scifi_button"
+                style = "@style/CategoryCardStyle">
+
+                <TextView
+                    style="@style/CategoryTextStyle"
+                    android:text="Sci-Fi" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/thriller_button"
+                style="@style/CategoryCardStyle">
+
+                <TextView
+                    style="@style/CategoryTextStyle"
+                    android:text="Thriller" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/comedy_button"
+                style="@style/CategoryCardStyle">
+
+                <TextView
+                    style="@style/CategoryTextStyle"
+                    android:text="Comedy" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/romance_button"
+                style="@style/CategoryCardStyle">
+
+                <TextView
+                    style="@style/CategoryTextStyle"
+                    android:text="Romance" />
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+

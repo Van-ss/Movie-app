@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    app:layoutDescription="@xml/details_activity_scene">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/ivImageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/DetailsPoster"
+        app:cardCornerRadius="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivMovieCover"
+            android:scaleType="centerCrop"
+            android:layout_width="105dp"
+            android:layout_height="158dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/Movie_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="20dp"
+        android:autoSizeMaxTextSize="40sp"
+        android:autoSizeMinTextSize="15sp"
+        android:autoSizeStepGranularity="5sp"
+        android:autoSizeTextType="uniform"
+        android:background="@drawable/roundedcorners"
+        android:elevation="10dp"
+        android:lines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivImageSlider" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="330dp"
+        android:background="@drawable/blackborder"
+        android:fontFamily="@font/overlock_sc"
+        android:text="Price"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tvGenre"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="350dp"
+        android:gravity="center"
+        android:background="@drawable/genrebackground"
+        android:elevation="10dp"
+        android:fontFamily="@font/overlock_sc"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:translationZ="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Button"
+        android:layout_width="116dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="330dp"
+        android:height="20dp"
+        android:backgroundTint="@color/black"
+        android:background="@drawable/blackborder"
+        android:fontFamily="@font/overlock_sc"
+        android:text="Trailer"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/tvPrice"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="400dp"
+        android:layout_marginBottom="-20dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/directorView"
+                style="@style/DetailsCardText"
+                android:layout_width="131dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Directed By:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/YearView" />
+
+            <TextView
+                android:id="@+id/YearView"
+                style="@style/DetailsCardText"
+                android:layout_width="131dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:text="Released:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDirector"
+                style="@style/DetailsCardText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvYear" />
+
+            <TextView
+                android:id="@+id/tvYear"
+                style="@style/DetailsCardText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="50dp"
+                android:text="Year Of Release"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/DetailsCardText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/average"
+                android:paddingVertical="20dp"
+                android:paddingHorizontal="30dp"
+                android:layout_marginTop="110dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Description" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
